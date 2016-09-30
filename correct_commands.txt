@@ -16,4 +16,23 @@ git status
 ls
 python functional_tests.py 
 django-admin.py startproject superlists
+python manage.py runserver
+python manage.py migrate # Django asks you to migrate 
+python manage.py runserver 
+#in new terminal window:
+python functional_tests.py 
+
+git mv functional_tests.py superlists/
+cd superlists/
+echo "superlists/db.sqlite3" >> ../.gitignore
+cd superlists/
+git add .
+git add ../.gitignore
+git rm -r --cached superlists/__pycache__
+echo "__pycache__" >> ../.gitignore
+echo "*.pyc" >> ../.gitignore
+git commit -m "added files to .gitignore"
+git push https://github.com/LauraLP/TDD.git
+
+
 
