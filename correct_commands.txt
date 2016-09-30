@@ -1,0 +1,19 @@
+cd STP/
+mkdir TDD
+ls
+cd TDD/
+touch functional_tests.py
+ls
+git init
+git add functional_tests.py 
+git status
+git commit -m "functional test for Django"
+git remote add origin git@github.com:LauraLP/TDD
+git status
+git add functional_tests.py 
+git push https://github.com/LauraLP/TDD.git
+git status
+ls
+python functional_tests.py 
+django-admin.py startproject superlists
+
